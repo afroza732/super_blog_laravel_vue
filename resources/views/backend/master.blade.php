@@ -20,6 +20,7 @@
         @include('backend.includes.nav')
         @include('backend.includes.sidebar')
         <div class="content-wrapper">
+            <home-component></home-component>
         </div>
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">

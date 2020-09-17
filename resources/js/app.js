@@ -5,11 +5,11 @@ window.Vue = require("vue");
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
 
-import { routes } from "./routes/routes";
+//import { routes } from "./routes/routes";
 
 Vue.component(
     "home-component",
-    require("./components/admin/master.vue").default
+    require("./components/ExampleComponent.vue").default
 );
 
 const router = new VueRouter({
