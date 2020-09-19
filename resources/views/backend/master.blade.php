@@ -6,6 +6,8 @@
     <title>@yield('title')</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Scripts -->
@@ -20,7 +22,10 @@
         @include('backend.includes.nav')
         @include('backend.includes.sidebar')
         <div class="content-wrapper">
-            <home-component></home-component>
+            <admin-main>
+                <admin-main />
+
+
         </div>
         <footer class="main-footer">
             <div class="float-right d-none d-sm-block">

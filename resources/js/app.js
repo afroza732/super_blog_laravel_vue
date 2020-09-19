@@ -4,18 +4,18 @@ window.Vue = require("vue");
 //router
 import VueRouter from "vue-router";
 Vue.use(VueRouter);
-
-//import { routes } from "./routes/routes";
+import { routes } from "./routes.js";
 
 Vue.component(
-    "home-component",
-    require("./components/ExampleComponent.vue").default
+    "admin-main",
+    require("./components/admin/MasterComponent.vue").default
 );
 
 const router = new VueRouter({
-    routes // short for `routes: routes`
+    routes,
+    mode: "history"
 });
-
+//console.log(router);
 const app = new Vue({
     el: "#app",
     router
